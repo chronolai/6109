@@ -25,7 +25,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '7.4.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
@@ -166,6 +166,17 @@
   </li>
   </ul>
 
+    
+
+  
+    
+    
+  
+    
+    
+  
+  
+
 </nav>
 </div>
     </header>
@@ -180,17 +191,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
-
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
@@ -205,7 +205,7 @@
         
           
         
-        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
+        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
       </div>
       
 
@@ -226,36 +226,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/09/26/hello/" itemprop="url">
-            <span itemprop="name">hello</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-26T06:23:56+08:00"
-              content="2019-09-26">
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/24/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/2019/09/25/hello-world/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
         
@@ -263,9 +234,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-24T01:30:30+08:00"
-              content="2019-09-24">
-          09-24
+              datetime="2019-09-25T23:10:19+00:00"
+              content="2019-09-25">
+          09-25
         </time>
       </div>
 
@@ -326,7 +297,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -355,7 +326,7 @@
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
         
 
@@ -381,61 +352,9 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  <script src="/lib/pjax/pjax.min.js?v=0.2.8"></script>
 <script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
 <script src="/js/next-boot.js?v=7.4.0"></script>
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
-    var id = element.id || '';
-    var src = element.src || '';
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (id !=='') {
-      script.id = element.id;
-    }
-    if (src !== '') {
-      script.src = src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
 
 
 
@@ -460,7 +379,6 @@ window.addEventListener('pjax:success', () => {
 
 
 
-    <div id="pjax">
 
   
 
@@ -468,6 +386,5 @@ window.addEventListener('pjax:success', () => {
 
   
 
-    </div>
 </body>
 </html>
