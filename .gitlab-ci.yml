@@ -5,7 +5,7 @@ image: node:10.15.3
 pages:
   script:
     - npm install hexo-cli -g
-    - test -e package.json && npm install
+    - test -e package.json && yarn
     - hexo generate
   artifacts:
     paths:
